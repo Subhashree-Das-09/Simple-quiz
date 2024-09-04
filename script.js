@@ -77,6 +77,9 @@ function showNextQuestion() {
 }
 
 function showPreviousQuestion() {
+    if (userAnswers.length > 0) {
+        userAnswers.pop(); // remove the last answer
+    }
     currentQuestionIndex--;
     buildQuiz();
 }
